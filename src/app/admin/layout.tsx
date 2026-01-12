@@ -34,11 +34,11 @@ export default async function AdminLayout({
             {/* Added hue-rotate to distinguish slightly */}
             <div className="fixed inset-0 z-0 bg-gradient-to-br from-surface-bg via-surface-bg/95 to-accent-primary/5 transition-colors duration-700" />
 
-            <div className="relative z-10 flex min-h-screen">
+            <div className="relative z-10 flex flex-col lg:flex-row min-h-screen overflow-x-hidden w-full">
                 <AdminSidebar />
 
-                <main className="flex-1 lg:ml-64 relative pt-20 lg:pt-0 min-w-0">
-                    <div className="p-4 md:p-8 lg:p-12 max-w-7xl mx-auto w-full overflow-hidden">
+                <main className="flex-1 w-full lg:pl-64 pt-16 lg:pt-0 min-h-screen relative overflow-x-hidden">
+                    <div className="px-4 py-8 sm:p-8 lg:p-12 max-w-7xl mx-auto">
                         {children}
                     </div>
                 </main>
