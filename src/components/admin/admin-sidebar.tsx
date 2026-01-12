@@ -1,9 +1,10 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LayoutDashboard, FolderGit2, Briefcase, Wrench, LogOut, Code2 } from "lucide-react";
-import { motion } from "framer-motion";
+import { LayoutDashboard, FolderGit2, Briefcase, Wrench, LogOut, Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -16,11 +17,26 @@ const sidebarItems = [
 
 export function AdminSidebar() {
     const pathname = usePathname();
+    const [isOpen, setIsOpen] = useState(false);
 
-    return (
-        <aside className="fixed left-0 top-0 h-screen w-64 glass-deep border-r border-surface-border hidden lg:flex flex-col z-50">
+    // Close sidebar when route changes
+    useEffect(() => {
+        setIsOpen(false);
+    }, [pathname]);
+
+    // Prevent body scroll when menu is open
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+    }, [isOpen]);
+
+    const SidebarContent = () => (
+        <div className="flex flex-col h-full">
             {/* Logo area */}
-            <div className="p-8 border-b border-surface-border">
+            <div className="p-8 border-b border-surface-border flex items-center justify-between">
                 <Link href="/" className="flex items-center gap-3 group">
                     <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center p-1.5 shadow-lg group-hover:shadow-accent-primary/20 transition-all duration-300">
                         <Image width={50} height={50} src="/logo.png" alt="Mustak Lebrown" className="w-full h-full object-contain" />
@@ -30,6 +46,12 @@ export function AdminSidebar() {
                         <p className="text-xs text-surface-muted">Portfolio Manager</p>
                     </div>
                 </Link>
+                <button
+                    onClick={() => setIsOpen(false)}
+                    className="lg:hidden p-2 text-surface-muted hover:text-surface-text transition-colors"
+                >
+                    <X size={24} />
+                </button>
             </div>
 
             {/* Navigation */}
@@ -70,7 +92,54 @@ export function AdminSidebar() {
                     <span className="font-medium">Logout</span>
                 </button>
             </div>
-        </aside>
+        </div>
+    );
+
+    return (
+        <>
+            {/* Desktop Sidebar */}
+            <aside className="fixed left-0 top-0 h-screen w-64 glass-deep border-r border-surface-border hidden lg:flex flex-col z-50">
+                <SidebarContent />
+            </aside>
+
+            {/* Mobile Header */}
+            <header className="lg:hidden fixed top-0 left-0 right-0 h-16 glass border-b border-surface-border z-[60] flex items-center justify-between px-6">
+                <Link href="/" className="flex items-center gap-2">
+                    <Image width={32} height={32} src="/logo.png" alt="Logo" className="w-8 h-8 object-contain" />
+                    <span className="font-bold text-lg">Admin</span>
+                </Link>
+                <button
+                    onClick={() => setIsOpen(true)}
+                    className="p-2 text-surface-muted hover:text-accent-primary transition-colors"
+                >
+                    <Menu size={24} />
+                </button>
+            </header>
+
+            {/* Mobile Sidebar Overlay */}
+            <AnimatePresence>
+                {isOpen && (
+                    <>
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setIsOpen(false)}
+                            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[70] lg:hidden"
+                        />
+                        <motion.aside
+                            initial={{ x: "-100%" }}
+                            animate={{ x: 0 }}
+                            exit={{ x: "-100%" }}
+                            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                            className="fixed left-0 top-0 h-screen w-[280px] bg-surface-bg glass-deep border-r border-surface-border z-[80] lg:hidden"
+                        >
+                            <SidebarContent />
+                        </motion.aside>
+                    </>
+                )}
+            </AnimatePresence>
+        </>
     );
 }
 

@@ -1,1 +1,2 @@
 redeploy-2
+responsive sidebar
