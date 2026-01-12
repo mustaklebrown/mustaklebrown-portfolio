@@ -30,7 +30,7 @@ export default async function AdminExperiencePage() {
                 {experiences?.map((exp) => (
                     <div
                         key={exp.id}
-                        className="glass p-6 rounded-3xl border border-surface-border hover:border-accent-primary/20 transition-all group flex flex-col md:flex-row gap-6 relative md:ml-12 shadow-lg hover:shadow-xl"
+                        className="glass p-5 sm:p-6 rounded-3xl border border-surface-border hover:border-accent-primary/20 transition-all group flex flex-col md:flex-row gap-6 relative md:ml-12 shadow-lg hover:shadow-xl"
                     >
                         {/* Timeline Dot */}
                         <div className="absolute -left-[31px] top-8 w-4 h-4 rounded-full bg-accent-primary border-4 border-surface-bg hidden md:block shadow-lg shadow-accent-primary/50" />

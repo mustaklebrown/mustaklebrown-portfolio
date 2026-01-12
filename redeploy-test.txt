@@ -3,3 +3,4 @@ responsive sidebar
 responsive admin v2
 fix overflow
 fix centering
+responsive admin v3

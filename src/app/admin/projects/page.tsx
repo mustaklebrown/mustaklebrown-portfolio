@@ -29,7 +29,7 @@ export default async function AdminProjectsPage() {
                 {projects?.map((project) => (
                     <div
                         key={project.id}
-                        className="glass p-6 rounded-3xl border border-surface-border hover:border-accent-primary/20 transition-all group flex flex-col md:flex-row gap-6 items-start md:items-center shadow-lg hover:shadow-xl"
+                        className="glass p-5 sm:p-6 rounded-3xl border border-surface-border hover:border-accent-primary/20 transition-all group flex flex-col md:flex-row gap-6 items-start md:items-center shadow-lg hover:shadow-xl"
                     >
                         {/* Image / Icon */}
                         <div className="w-full md:w-24 h-24 rounded-2xl bg-surface-bg border border-surface-border flex items-center justify-center overflow-hidden shrink-0 relative">

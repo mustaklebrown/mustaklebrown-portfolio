@@ -75,10 +75,10 @@ export default function AdminDashboard() {
                     animate={{ opacity: 1, x: 0 }}
                     className="space-y-1"
                 >
-                    <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight text-surface-text">
+                    <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-surface-text">
                         Dashboard <span className="text-gradient-brand">Overview</span>
                     </h1>
-                    <p className="text-surface-muted text-lg font-medium">Manage your digital presence and portfolio content.</p>
+                    <p className="text-surface-muted text-base sm:text-lg font-medium">Manage your digital presence and portfolio content.</p>
                 </motion.div>
                 <div className="flex items-center gap-3">
                     <div className="hidden md:flex flex-col items-end px-4 border-r border-surface-border uppercase tracking-widest leading-none">
@@ -106,13 +106,13 @@ export default function AdminDashboard() {
 
                         <Link
                             href={stat.href}
-                            className="relative flex flex-col h-full glass-deep rounded-[32px] border border-surface-border p-8 overflow-hidden transition-all duration-500 group-hover:translate-y-[-4px] group-hover:shadow-[0_20px_40px_-15px_rgba(249,115,22,0.15)]"
+                            className="relative flex flex-col h-full glass-deep rounded-[32px] border border-surface-border p-6 sm:p-8 overflow-hidden transition-all duration-500 group-hover:translate-y-[-4px] group-hover:shadow-[0_20px_40px_-15px_rgba(249,115,22,0.15)]"
                         >
                             {/* Animated Background Pulse */}
                             <div className={`absolute -right-16 -top-16 w-48 h-48 rounded-full ${stat.bg} blur-[60px] group-hover:scale-150 transition-transform duration-700 opacity-50`} />
 
                             <div className="relative z-10 flex flex-col h-full">
-                                <div className="flex items-start justify-between mb-8">
+                                <div className="flex items-start justify-between mb-6 sm:mb-8">
                                     <div className={`p-4 rounded-2xl ${stat.bg} ${stat.color} shadow-xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 relative`}>
                                         <div className="absolute inset-0 rounded-2xl bg-current opacity-0 group-hover:opacity-20 blur-lg transition-opacity" />
                                         <stat.icon size={28} className="relative z-10" />
@@ -130,7 +130,7 @@ export default function AdminDashboard() {
 
                                 <div className="mt-auto space-y-2">
                                     <div className="flex items-baseline gap-2">
-                                        <h3 className="text-5xl font-black tracking-tighter text-surface-text group-hover:text-gradient-brand transition-all duration-500">
+                                        <h3 className="text-4xl sm:text-5xl font-black tracking-tighter text-surface-text group-hover:text-gradient-brand transition-all duration-500">
                                             {stat.value}
                                         </h3>
                                         <div className="h-2 w-2 rounded-full bg-accent-primary animate-pulse" />
@@ -165,7 +165,7 @@ export default function AdminDashboard() {
                 {/* Left Column: Recent Projects & Content Insights */}
                 <div className="space-y-8">
                     {/* Recent Projects Preview */}
-                    <div className="glass-vibrant p-8 rounded-[40px] border border-surface-border space-y-8 shadow-2xl">
+                    <div className="glass-vibrant p-5 sm:p-8 rounded-[40px] border border-surface-border space-y-6 sm:space-y-8 shadow-2xl">
                         <div className="flex items-center justify-between">
                             <div className="flex items-center gap-3">
                                 <div className="w-1.5 h-6 bg-accent-secondary rounded-full" />
@@ -212,8 +212,8 @@ export default function AdminDashboard() {
                     </div>
 
                     {/* Quick Add Section */}
-                    <div className="glass p-8 rounded-[40px] border border-surface-border shadow-xl bg-gradient-to-br from-accent-primary/5 to-transparent">
-                        <h2 className="text-2xl font-bold mb-6 text-surface-text">Quick Add</h2>
+                    <div className="glass p-5 sm:p-8 rounded-[40px] border border-surface-border shadow-xl bg-gradient-to-br from-accent-primary/5 to-transparent">
+                        <h2 className="text-xl sm:text-2xl font-bold mb-6 text-surface-text">Quick Add</h2>
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                             <Link href="/admin/projects/new" className="flex flex-col items-center justify-center gap-3 p-6 rounded-3xl bg-surface-bg/50 border border-surface-border hover:border-accent-secondary/50 hover:bg-accent-secondary/5 transition-all group text-center shadow-sm">
                                 <div className="w-12 h-12 rounded-2xl bg-accent-secondary/10 text-accent-secondary flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
@@ -242,11 +242,11 @@ export default function AdminDashboard() {
                 {/* Right Column: Experience & Skills Snapshot */}
                 <div className="space-y-8">
                     {/* Recent Experience Entry */}
-                    <div className="glass p-8 rounded-[40px] border border-surface-border shadow-2xl space-y-8">
+                    <div className="glass p-5 sm:p-8 rounded-[40px] border border-surface-border shadow-2xl space-y-6 sm:space-y-8">
                         <div className="flex items-center justify-between">
                             <div className="flex items-center gap-3">
                                 <div className="w-1.5 h-6 bg-accent-tertiary rounded-full" />
-                                <h2 className="text-2xl font-bold text-surface-text">Latest Milestone</h2>
+                                <h2 className="text-xl sm:text-2xl font-bold text-surface-text">Latest Milestone</h2>
                             </div>
                             <Link href="/admin/experience" className="text-sm font-bold text-accent-tertiary hover:text-accent-tertiary-hover transition-colors uppercase tracking-widest">
                                 View Timeline
@@ -280,11 +280,11 @@ export default function AdminDashboard() {
                     </div>
 
                     {/* Skills Summary / Cloud Preview */}
-                    <div className="glass p-8 rounded-[40px] border border-surface-border shadow-2xl space-y-8">
+                    <div className="glass p-5 sm:p-8 rounded-[40px] border border-surface-border shadow-2xl space-y-6 sm:space-y-8">
                         <div className="flex items-center justify-between">
                             <div className="flex items-center gap-3">
                                 <div className="w-1.5 h-6 bg-accent-primary rounded-full" />
-                                <h2 className="text-2xl font-bold text-surface-text">Skill Cloud</h2>
+                                <h2 className="text-xl sm:text-2xl font-bold text-surface-text">Skill Cloud</h2>
                             </div>
                             <Link href="/admin/skills" className="text-sm font-bold text-accent-primary hover:text-accent-primary-hover transition-colors uppercase tracking-widest">
                                 Update Skills

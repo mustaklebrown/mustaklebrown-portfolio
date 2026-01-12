@@ -45,7 +45,7 @@ export default async function AdminSkillsPage() {
                                 return (
                                     <div
                                         key={skill.id}
-                                        className="glass p-5 rounded-2xl border border-surface-border hover:border-accent-primary/20 transition-all group flex items-center justify-between gap-4 shadow-sm hover:shadow-md"
+                                        className="glass p-4 sm:p-5 rounded-2xl border border-surface-border hover:border-accent-primary/20 transition-all group flex items-center justify-between gap-4 shadow-sm hover:shadow-md"
                                     >
                                         <div className="flex items-center gap-4 overflow-hidden">
                                             <div className="p-2.5 rounded-xl bg-accent-primary/10 text-accent-primary shrink-0">
