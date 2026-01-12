@@ -2,7 +2,9 @@ import { MetadataRoute } from 'next';
 import prisma from '@/lib/db';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://mustak.dev';
+  const baseUrl =
+    process.env.NEXT_PUBLIC_APP_URL ||
+    'https://mustaklebrown-portfolio.vercel.app/';
 
   // Fetch all projects for dynamic routes
   const projects = await prisma.project.findMany({

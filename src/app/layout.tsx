@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://mustak.dev'),
+    metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://mustaklebrown-portfolio.vercel.app/'),
     title: "Mustak Lebrown - Creative Developer Portfolio",
     description: "Personal portfolio of Mustak Lebrown, a creative web developer specialized in modern web technologies, premium UI design, and interactive experiences.",
     icons: {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Mustak Lebrown - Creative Developer Portfolio",
         description: "Explore the works and expertise of Mustak Lebrown, featuring premium web applications and creative designs.",
-        url: "https://mustak.dev", // Update to actual URL if known
+        url: "https://mustaklebrown-portfolio.vercel.app/", // Update to actual URL if known
         siteName: "Mustak Lebrown Portfolio",
         images: [
             {

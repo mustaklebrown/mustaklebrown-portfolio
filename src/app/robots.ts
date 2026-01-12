@@ -1,7 +1,9 @@
 import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://mustak.dev';
+  const baseUrl =
+    process.env.NEXT_PUBLIC_APP_URL ||
+    'https://mustaklebrown-portfolio.vercel.app/';
 
   return {
     rules: {
