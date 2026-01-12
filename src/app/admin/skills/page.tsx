@@ -16,14 +16,14 @@ export default async function AdminSkillsPage() {
 
     return (
         <div className="space-y-8">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
                     <h1 className="text-3xl md:text-4xl font-bold mb-2">Skills</h1>
                     <p className="text-surface-muted">Manage your technical expertise.</p>
                 </div>
                 <Link
                     href="/admin/skills/new"
-                    className="flex items-center gap-2 px-5 py-2.5 bg-accent-primary hover:bg-accent-primary-hover text-white rounded-xl font-medium transition-all shadow-lg shadow-accent-primary/20"
+                    className="flex items-center justify-center gap-2 px-6 py-3 bg-accent-primary hover:bg-accent-primary-hover text-white rounded-xl font-bold transition-all shadow-lg shadow-accent-primary/20 w-fit"
                 >
                     <Plus size={18} />
                     <span>Add Skill</span>

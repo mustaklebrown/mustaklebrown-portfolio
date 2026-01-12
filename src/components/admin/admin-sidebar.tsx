@@ -103,17 +103,20 @@ export function AdminSidebar() {
             </aside>
 
             {/* Mobile Header */}
-            <header className="lg:hidden fixed top-0 left-0 right-0 h-16 glass border-b border-surface-border z-[60] flex items-center justify-between px-6">
-                <Link href="/" className="flex items-center gap-2">
-                    <Image width={32} height={32} src="/logo.png" alt="Logo" className="w-8 h-8 object-contain" />
-                    <span className="font-bold text-lg">Admin</span>
-                </Link>
+            <header className="lg:hidden fixed top-0 left-0 right-0 h-16 glass border-b border-surface-border z-[60] flex items-center px-4">
                 <button
                     onClick={() => setIsOpen(true)}
-                    className="p-2 text-surface-muted hover:text-accent-primary transition-colors"
+                    className="p-3 text-surface-muted hover:text-accent-primary transition-all active:scale-95"
+                    aria-label="Open Menu"
                 >
                     <Menu size={24} />
                 </button>
+                <div className="flex-1 flex justify-center lg:justify-start pr-10">
+                    <Link href="/admin" className="flex items-center gap-2">
+                        <Image width={32} height={32} src="/logo.png" alt="Logo" className="w-8 h-8 object-contain" />
+                        <span className="font-bold text-lg tracking-tight">Admin</span>
+                    </Link>
+                </div>
             </header>
 
             {/* Mobile Sidebar Overlay */}

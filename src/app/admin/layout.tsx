@@ -37,13 +37,8 @@ export default async function AdminLayout({
             <div className="relative z-10 flex min-h-screen">
                 <AdminSidebar />
 
-                <main className="flex-1 lg:ml-64 relative pt-16 lg:pt-0">
-                    {/* Top Bar / Actions */}
-                    <div className="absolute top-6 right-6 z-50 hidden lg:block">
-                        <ThemeToggle />
-                    </div>
-
-                    <div className="p-6 md:p-12 max-w-7xl mx-auto w-full">
+                <main className="flex-1 lg:ml-64 relative pt-20 lg:pt-0">
+                    <div className="p-4 md:p-8 lg:p-12 max-w-7xl mx-auto w-full">
                         {children}
                     </div>
                 </main>
