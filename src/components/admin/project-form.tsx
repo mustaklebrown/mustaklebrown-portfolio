@@ -98,7 +98,7 @@ export function ProjectForm({ initialData }: ProjectFormProps) {
     };
 
     return (
-        <div className="glass p-8 rounded-3xl border border-white/5 space-y-6">
+        <div className="glass p-5 sm:p-8 rounded-3xl border border-white/5 space-y-6 max-w-4xl mx-auto">
             <div className="flex items-center justify-between pb-6 border-b border-white/10">
                 <h2 className="text-2xl font-bold">{initialData ? 'Edit Project' : 'New Project'}</h2>
                 {error && <div className="text-red-400 text-sm font-medium bg-red-400/10 px-3 py-1 rounded-lg">{error}</div>}
