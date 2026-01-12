@@ -26,22 +26,22 @@ export const sections: Section[] = [
 export const services: Service[] = [
   {
     title: 'Premium Web Development',
-    desc: 'Crafting high-performance, responsive websites with a focus on clean code and modern aesthetics.',
+    desc: 'Crafting high-performance, responsive websites with a focus on clean code and modern aesthetics',
     icon: 'Code',
   },
   {
     title: 'UI/UX Design Systems',
-    desc: 'Building scalable design systems and intuitive user interfaces that deliver exceptional user experiences.',
+    desc: 'Building scalable design systems and intuitive user interfaces that deliver exceptional user experiences',
     icon: 'Palette',
   },
   {
     title: 'Custom SaaS Solutions',
-    desc: 'Developing robust full-stack applications and automated platforms tailored to your business needs.',
+    desc: 'Developing robust full-stack applications and automated platforms tailored to your business needs',
     icon: 'Rocket',
   },
   {
     title: 'Visual Storytelling',
-    desc: 'Bringing brands to life through immersive animations, dynamic interactions, and creative front-end engineering.',
+    desc: 'Bringing brands to life through immersive animations, dynamic interactions, and creative front-end engineering',
     icon: 'Sparkles',
   },
 ];
